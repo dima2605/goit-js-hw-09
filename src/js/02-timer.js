@@ -16,6 +16,7 @@ const options = {
     timerDeadline = selectedDates[0].getTime();
     if (timerDeadline < Date.now()) {
       Notify.warning('Please choose a date in the future');
+      startRef.disabled = true;
     } else {
       startRef.disabled = false;
     }
